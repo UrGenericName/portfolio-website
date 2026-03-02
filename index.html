@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name | CS Portfolio</title>
+<title>Marius Arcay | Portfolio</title>
 
 <style>
 :root {
@@ -33,6 +33,7 @@ nav {
     padding: 1rem;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 
 nav label {
@@ -69,43 +70,6 @@ section {
 .accent-line {
     border-left: 4px solid var(--primary); /* or any color */
     padding-left: 15px;
-}
-
-.profile-pic-container {
-    display: flex;         /* Enables flexbox */
-    align-items: center;    /* Vertically aligns text and image */
-    gap: 20px;             /* Adds space between the text and image */
-}
-
-.contact-pic-container {
-    display: flex;         /* Enables flexbox */
-    align-items: center;    /* Vertically aligns text and image */
-    gap: 15px;             /* Adds space between the text and image */
-}
-
-.contact-pic {
-    /* Adjust size and margins as needed */
-    box-shadow: 2px 2px 0 0 #d7d5f459; 
-    position: relative;
-    top: 5px;
-    height: auto;
-    
-}
-
-.profile-pic {
-    /* Adjust size and margins as needed */
-    box-shadow: 4px 4px 0 0 #6C63FF; 
-    position: relative;
-    top: -5px;
-    height: auto;
-    
-}
-
-.project-pic {
-    box-shadow: 5px 5px 0 0 #6b63ff66; 
-    position: relative;
-    height: auto;
-    
 }
 
 @keyframes fade {
@@ -181,6 +145,43 @@ p {
     color: inherit;        /* Preserve text color */
 }
 
+.profile-pic-container {
+    display: flex;         /* Enables flexbox */
+    align-items: center;    /* Vertically aligns text and image */
+    gap: 20px;             /* Adds space between the text and image */
+}
+
+.contact-pic-container {
+    display: flex;         /* Enables flexbox */
+    align-items: center;    /* Vertically aligns text and image */
+    gap: 15px;             /* Adds space between the text and image */
+}
+
+.contact-pic {
+    /* Adjust size and margins as needed */
+    box-shadow: 2px 2px 0 0 #d7d5f459; 
+    position: relative;
+    top: 5px;
+    height: auto;
+    
+}
+
+.profile-pic {
+    /* Adjust size and margins as needed */
+    box-shadow: 4px 4px 0 0 #6C63FF; 
+    position: relative;
+    top: -5px;
+    height: auto;
+    
+}
+
+.project-pic {
+    box-shadow: 5px 5px 0 0 #6b63ff66; 
+    position: relative;
+    height: auto;
+    
+}
+
 .project-title {
     display: flex;
     align-items: center;
@@ -190,6 +191,52 @@ p {
 .project-icon {
     width: 100px; /* adjust size */
     height: auto;
+}
+
+.work-experience-card {
+    max-width: 800px; 
+    padding: 24px;
+    margin: 24px 0;
+    border-radius: 12px;
+    background-color: #111; /* adjust to your theme */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.work-experience-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.work-experience-header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.work-experience-header h3 {
+    margin: 0;
+    text-align: left;
+}
+
+.work-dates p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.3;
+}
+
+.job-title {
+    margin: 2px 0 0 0;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.work-experience-card p {
+    margin: 1;
+    line-height: 1.6;
+    text-align: left;
 }
 
 /* Contact Form */
@@ -224,6 +271,19 @@ button:hover {
     section {
         padding: 2rem;
     }
+
+    .work-experience-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-experience-image img {
+        width: 100px;
+    }
+    .work-dates {
+        margin-left: auto;   /* pushes it to the right */
+        text-align: right;
+    }
 }
 </style>
 </head>
@@ -252,12 +312,58 @@ button:hover {
         <h1>About Me</h1>
     </div>
     <p></p>
-    <p>Hello!  My name is <b>Marius Arcay</b>, I am currently a Junior at San Jose State University perusing a Bachelor degree in <b>Computer Science</b>.  I've also earned Associate degrees in <b>Mathematics</b> and <b>Liberal Arts: Math & Science</b> at West Valley College.</p>
-    <p class="accent-line"><b>Languages: </b> C++, C, Python, Java, JavaScript, Assembly</p>
-    <p>I primarily enjoy low-level and performance intensive software development, but I am profecient in high-level and web-development languages aswell.</p>
-    <p>Outside of software development, I specialize in 3D technical art, environment art, and asset creation. Most recently, I completed contract work for Valve Corporation working on official content for <b>Counter-Strike 2</b>, which directly funds my education at SJSU.
-</p>
+    <p>Hello! My name is <b>Marius Arcay</b>. I am currently a junior at San Jose State University pursuing a Bachelor's degree in <b>Computer Science</b>. I have also earned Associate degrees in <b>Mathematics</b> and <b>Liberal Arts: Math & Science</b> from West Valley College.</p>
+    <p class="accent-line"><b>Languages:</b> C++, C, Python, Java, JavaScript, Assembly</p>
+    <p>I primarily enjoy low-level and performance-intensive software development (such as 3D graphics), but I am also proficient in high-level and web development languages.</p>
+    <p>Outside of software development, I specialize in 3D technical art, environment art, and asset creation. Most recently, I completed contract work for Valve Corporation, contributing to official content for <b>Counter-Strike 2</b>, which helps fund my education at SJSU.</p>
+
+    <h1>Work Experience</h1>
+    
+    <div class="work-experience-card">
+        <div class="work-experience-header">
+            <img src="https://media.licdn.com/dms/image/v2/C560BAQFFslEKKfysQg/company-logo_100_100/company-logo_100_100/0/1630629926947/valve_corporation_logo?e=1773878400&v=beta&t=3bDku3ERXcFCwMVfxzInvm6IRYDG7dnn3NgyfB82wxQ" alt="Valve Corporation Logo">
+            <div>
+                <h3>Valve Corporation</h3>
+                <p class="job-title">3D Artist (Contract)</p>
+            </div>
+            <div class="work-dates">Oct 2025 - Jan 2026</p>
+                <p>Remote</p>
+            </div>
+        </div>
+
+        <p>
+            Authored an officially selected multiplayer map for <strong>Counter-Strike 2</strong> using Valve’s proprietary technology, adhering to strict performance and gameplay standards.
+        </p>
+        <p>
+            Maintained <strong>high-performance</strong> across diverse hardware configurations.
+        </p>
+        <p>
+            Shipped to a global audience of <strong>millions of players worldwide</strong>.
+        </p>
+    </div>
+    
+    <div class="work-experience-card">
+        <div class="work-experience-header">
+            <img src="https://media.licdn.com/dms/image/v2/D560BAQHfraZi4OL2wQ/company-logo_100_100/B56ZsOsST9G4AU-/0/1765478049327/target_logo?e=1773878400&v=beta&t=hveDfrgGHuQhNS5CfXD_c4d95jo7xfS959Kw3k-chXU" alt="Valve Corporation Logo">
+            <div>
+                <h3>Target</h3>
+                <p class="job-title">Retail Tech Consultant</p>
+            </div>
+            <div class="work-dates">Jun 2021 - Present</p>
+                <p>Morgan Hill, CA</p>
+            </div>
+        </div>
+
+        <p>
+            Provided personalized expertise to help guests <strong>select, understand, and purchase</strong> electronics.
+        </p>
+        <p>
+            Provided accurate, up-to-date advice and recommendations.
+        </p>
+    </div>
+    
 </section>
+
 
 <section id="projects-section">
     <h1>Projects</h1>
