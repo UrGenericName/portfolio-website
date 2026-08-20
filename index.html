@@ -266,6 +266,77 @@ button:hover {
     background: var(--accent);
 }
 
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 750px;
+    margin: 30px auto 0;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    border: 1px solid rgba(108, 99, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    border-color: #6C63FF;
+    background: rgba(108, 99, 255, 0.08);
+}
+
+.link-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    border-radius: 10px;
+    background: #6C63FF;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.link-content {
+    flex: 1;
+}
+
+.link-content h3 {
+    margin: 0 0 4px;
+    font-size: 17px;
+}
+
+.link-content p {
+    margin: 0;
+    opacity: 0.65;
+    font-size: 14px;
+}
+
+.link-arrow {
+    margin-left: 15px;
+    font-size: 22px;
+    opacity: 0.5;
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+.link-card:hover .link-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     section {
@@ -312,121 +383,121 @@ button:hover {
         <h1>About Me</h1>
     </div>
     <p></p>
-    <p>Hello! My name is <b>Marius Arcay</b>. I am currently a junior at San Jose State University pursuing a Bachelor's degree in <b>Computer Science</b>. I have also earned Associate degrees in <b>Mathematics</b> and <b>Liberal Arts: Math & Science</b> from West Valley College.</p>
-    <p class="accent-line"><b>Languages:</b> C++, C, Python, Java, JavaScript, Assembly</p>
+    <p>Hello! My name is <b>Marius Arcay</b>. I am currently a junior at San Jose State University pursuing a Bachelor's degree in <b>Computer Science</b>. I have also earned an Associate's degree in Mathematics from West Valley College, and am in the process of finishing an Associate's degree in Physics.</p>
+    <p class="accent-line"><b>Languages:</b> C++, C, GLSL, Python, Java, Assembly (ARM)</p>
     <p>I primarily enjoy low-level and performance-intensive software development (such as 3D graphics), but I am also proficient in high-level and web development languages.</p>
     <p>Outside of software development, I specialize in 3D technical art, environment art, and asset creation. Most recently, I completed contract work for Valve Corporation, contributing to official content for <b>Counter-Strike 2</b>, which helps fund my education at SJSU.</p>
 
     <h1>Work Experience</h1>
     
-    <div class="work-experience-card">
-        <div class="work-experience-header">
-            <img src="./icons/valve_corporation_logo.jpg" alt="Valve Corporation Logo">
-            <div>
-                <h3>Valve Corporation</h3>
-                <p class="job-title">3D Artist (Contract)</p>
-            </div>
-            <div class="work-dates">Oct 2025 - Jan 2026</p>
-                <p>Remote</p>
-            </div>
-        </div>
-
-        <p>
-            Authored an officially selected multiplayer map for <strong>Counter-Strike 2</strong> using Valve’s proprietary technology, adhering to strict performance and gameplay standards.
-        </p>
-        <p>
-            Maintained <strong>high-performance</strong> across diverse hardware configurations.
-        </p>
-        <p>
-            Shipped to a global audience of <strong>millions of players worldwide</strong>.
-        </p>
-    </div>
-    
-    <div class="work-experience-card">
-        <div class="work-experience-header">
-            <img src="./icons/target_logo.jpg" alt="Valve Corporation Logo">
-            <div>
-                <h3>Target</h3>
-                <p class="job-title">Retail Tech Consultant</p>
-            </div>
-            <div class="work-dates">Jun 2021 - Present</p>
-                <p>Morgan Hill, CA</p>
-            </div>
-        </div>
-
-        <p>
-            Provided personalized expertise to help guests <strong>select, understand, and purchase</strong> electronics.
-        </p>
-        <p>
-            Offered accurate, up-to-date advice and recommendations to guests.
-        </p>
-    </div>
+<div class="work-experience-card"> <div class="work-experience-header"> <img src="./icons/valve_corporation_logo.jpg" alt="Valve Corporation Logo"> <div> <h3>Valve Corporation</h3> <p class="job-title">3D Artist (Contract)</p> </div> <div class="work-dates"> <p>Oct 2025 - Jan 2026</p> <p>Remote</p> </div> </div> <p> Authored <strong>Rooftop</strong>, an official <strong>Counter-Strike 2</strong> multiplayer map using Valve’s proprietary technology, balancing visual fidelity, gameplay requirements, and performance. </p> <p> Profiled and optimized <strong>scene geometry, materials, lighting, and assets</strong> to meet performance standards expected of an official Counter-Strike 2 map. </p> <p> Shipped to a global audience of <strong>millions of players</strong>. </p> </div> <div class="work-experience-card"> <div class="work-experience-header"> <img src="./icons/target_logo.jpg" alt="Target Logo"> <div> <h3>Target</h3> <p class="job-title">Retail Tech Consultant</p> </div> <div class="work-dates"> <p>Jun 2021 - Present</p> <p>Morgan Hill, CA</p> </div> </div> <p> Provided personalized expertise to help guests <strong>select, understand, and purchase</strong> electronics. </p> </div>
     
 </section>
 
 
 <section id="projects-section">
     <h1>Projects</h1>
+
     <div class="card-container">
+
+        <!-- CUDA Fractal Renderer -->
+        <a href="https://www.linkedin.com/pulse/cuda-fractal-renderer-marius-arcay-yavkc/" class="card-link">
+            <div class="card split-card">
+                <div class="card-content">
+                    <h3>CUDA Fractal Renderer (C++)</h3>
+                    <p>
+                        Built a CUDA-accelerated fractal renderer achieving a
+                        100&times; GPU speedup over single-threaded CPU benchmarks
+                        across Mandelbrot and Julia sets, with CPU/GPU benchmarking,
+                        dynamic iteration scaling, and video rendering.
+                    </p>
+                </div>
+
+                <div class="card-image">
+                    <img
+                        src="./icons/project_cuda_fractal_renderer.png"
+                        class="project-pic"
+                        alt="CUDA Fractal Renderer project"
+                    >
+                </div>
+            </div>
+        </a>
+
+        <!-- OpenGL PBR Path Tracer -->
+        <a href="https://www.linkedin.com/pulse/opengl-pbr-path-tracing-engine-marius-arcay-qfahc/" class="card-link">
+            <div class="card split-card">
+                <div class="card-content">
+                    <h3>OpenGL PBR Path Tracer (C++)</h3>
+                    <p>
+                        Built a GPU-accelerated path tracer using OpenGL/GLSL with
+                        Monte Carlo sampling and Cook-Torrance GGX PBR, supporting
+                        texture-based materials, depth prepass rendering,
+                        scene importing, and interactive rendering tools.
+                    </p>
+                </div>
+
+                <div class="card-image">
+                    <img
+                        src="./icons/project_opengl_path_tracer.png"
+                        class="project-pic"
+                        alt="OpenGL PBR Path Tracer project"
+                    >
+                </div>
+            </div>
+        </a>
+
+        <!-- 3D Graphics Library -->
         <a href="https://github.com/UrGenericName/3Dgraphics" class="card-link">
             <div class="card split-card">
                 <div class="card-content">
                     <h3>3D Graphics Library (C++)</h3>
-                    <p>Built a real-time, multi-threaded 3D rendering engine in C++.  Features scene, mesh, and shader architecture, as well as an model importer for traditional file-types.</p>
+                    <p>
+                        Built a multi-threaded CPU 3D renderer in C++ featuring
+                        scene configuration, mesh management, animation, and
+                        model conversion for traditional file types.
+                    </p>
                 </div>
+
                 <div class="card-image">
-                    <img src="./icons/project_3d_graphics.jpg" class="project-pic" alt="Project Image">
+                    <img
+                        src="./icons/project_3d_graphics.jpg"
+                        class="project-pic"
+                        alt="3D Graphics Library project"
+                    >
                 </div>
             </div>
         </a>
-        <a href="https://docs.google.com/document/d/1SZqIfrcqUl6OeupDYiV7Bvgqdqn48WG0b_P6eIfX1HQ/edit?usp=sharing" class="card-link">
+
+        <!-- Environmental Monitoring Device -->
+        <a
+            href="https://docs.google.com/document/d/1SZqIfrcqUl6OeupDYiV7Bvgqdqn48WG0b_P6eIfX1HQ/edit?usp=sharing"
+            class="card-link"
+        >
             <div class="card split-card">
                 <div class="card-content">
                     <h3>Environmental Monitoring Device (Capstone Project)</h3>
-                    <p>Raspberry Pi device which captures, stores, and visualizes environmental metrics through a MySQL database, interfaced with a program built in standard C.</p>
+                    <p>
+                        Developed a Raspberry Pi-based device in C to collect,
+                        store, and visualize environmental measurements using
+                        I2C sensors and a MySQL database.
+                    </p>
                 </div>
+
                 <div class="card-image">
-                    <img src="./icons/environment_monitoring_station.jpg" class="project-pic" alt="Project Image">
+                    <img
+                        src="./icons/project_environment_monitoring_station.jpg"
+                        class="project-pic"
+                        alt="Environmental Monitoring Device project"
+                    >
                 </div>
             </div>
         </a>
+
     </div>
 </section>
 
-<section id="contact-section">
-    <h1>Links</h1>
-    <p>Feel free to reach out through any of the platforms below:</p>
 
-    <div class="contact-list">
-        <div class="contact-item">
-            <div class="contact-pic-container">
-                <img src="./icons/email.jpg" class="contact-pic" alt="Marius Arcay" width="32">
-                <h3>Email:&ensp;<a style="color: #6C63FF;"href="mailto:marius@arcay.net">marius@arcay.net</a></h3>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-pic-container">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDUlEQVR4AWP4////gOLB44D6nTcsGIo33QHi/zTGd0B2YTiAPpYjHIHNAf/piQk6wGPW8f/rLz8HYRCbXg5AWI4GQGJ0cwDY12gAJDbcHUA4CkZAIqQUK7Ts/m/SfxBMs5RupswBaACr+P47b/5zlG/5DyzZ/r/+8hNF7vuvP//nn3r0X6JhJ+0ccPrR+/+H7735jw9cf/n5v0D1Nuo5gBxQve06zR0AjoL7b7/+//zjN4bc+ScfaOeA33///k9Yfg4mDw7u/Xdeo6uhnQP6D93FMNxlxjF0ZbRzgMXEQ9iyI90cALIMJoccDXRzAK6CZog6YNQBow6gIx54Bwx4x2RAu2bAysoEZu9o7xgAQrvkxt3WZi0AAAAASUVORK5CYII=" class="contact-pic" alt="Marius Arcay" width="32">
-                <h3>LinkedIn:&ensp;<a style="color: #6C63FF;"href="https://linkedin.com/in/marius-arcay">linkedin.com/in/marius-arcay</a></h3>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-pic-container">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEX////4+Pi3ubtvcnZNUVU+Q0cpLjLr6+x3en0sMTYkKS59gIORk5aUl5n8/Pzw8PFTV1tbX2Pc3d5DSEzn5+g3PECLjpFKTlKFh4qxs7XCxMUuMze/wcLh4uPV1tZzd3o/Q0jOz9CmqKpjZ2qfoaTxAyfNAAABPUlEQVR4AW3TBYKDMBQE0AltAgzuzur9z7ibH5oKfWjc4UEFl6s2Rl8vgcJZGMX04iTEM5UaPomzHA+KkidVAa/WfKNpffMd32oKCHUlWfb27Q19ZSMVrNHGTMDckMtQLqSegdXGpvi3Sf93W9UudRby2WzsEgL4oMvwoqY1AsrQNfFipbXkCGh1BV6oT1pfRwvfOJlo9ZA5NAonStbmB1pawBuDTAgkX4MzV/eC2H3e0C7lk1aBEzd+7SpigJOZVoXx+J5UxzADil+8+KZYoRaK5y2WZxSdgm0j+dakzkIc2kzT6W3IcFnDTzdt4sKbWMqkpNl229IMsfMmg6UaMsJXmv4qCMXDoI4mO5oADwyFDnGoO3KI0jSHQ6E3eJum5TP4Y+EVyUOGXHZjgWd7ZEwOJzZRjbPQt7mF8P4AzsYZpmkFLF4AAAAASUVORK5CYII=" class="contact-pic" alt="Marius Arcay" width="32">
-                <h3>Github:&ensp;<a style="color: #6C63FF;"href="https://github.com/UrGenericName">github.com/UrGenericName</a></h3>
-            </div>
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-pic-container">
-                <img src="https://static.vecteezy.com/system/resources/previews/033/999/389/non_2x/resume-icon-personal-data-check-icon-icon-for-web-design-isolated-on-white-background-vector.jpg" class="contact-pic" alt="Marius Arcay" width="32">
-                <h3><a style="color: #6C63FF;"href="./marius_arcay_resume.pdf">Resume</a></h3>
-            </div>
-        </div>
-    </div>
-</section>
+<section id="contact-section"> <h1>Links</h1> <div class="links-container"> <a href="mailto:marius@arcay.net" class="link-card"> <div class="link-icon">✉</div> <div class="link-content"> <h3>Email</h3> <p>marius@arcay.net</p> </div> <div class="link-arrow">→</div> </a> <a href="https://linkedin.com/in/marius-arcay" class="link-card" target="_blank" rel="noopener noreferrer" > <div class="link-icon">in</div> <div class="link-content"> <h3>LinkedIn</h3> <p>linkedin.com/in/marius-arcay</p> </div> <div class="link-arrow">→</div> </a> <a href="https://github.com/UrGenericName" class="link-card" target="_blank" rel="noopener noreferrer" > <div class="link-icon">GH</div> <div class="link-content"> <h3>GitHub</h3> <p>github.com/UrGenericName</p> </div> <div class="link-arrow">→</div> </a> <a href="https://www.artstation.com/mariusss" class="link-card" target="_blank" rel="noopener noreferrer" > <div class="link-icon">3D</div> <div class="link-content"> <h3>ArtStation</h3> <p>3D art, environments, and map projects</p> </div> <div class="link-arrow">→</div> </a> <a href="./marius_arcay_resume.pdf" class="link-card"> <div class="link-icon">CV</div> <div class="link-content"> <h3>Resume</h3> <p>View my current resume</p> </div> <div class="link-arrow">→</div> </a> </div> </section>
 
 </div>
 
